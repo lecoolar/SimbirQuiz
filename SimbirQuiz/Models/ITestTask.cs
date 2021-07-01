@@ -8,8 +8,8 @@ namespace SimbirQuiz.Models
 		string Question { get; set; }
 		int Point { get; set; }
 
-		List<string> Videos { get; set; }
-		List<string> Audios { get; set; }
+		string Media { get; set; }
+		//string Audio { get; set; }
 		ObservableCollection<string> Images { get; set; }
 
 		//void AddVideo();

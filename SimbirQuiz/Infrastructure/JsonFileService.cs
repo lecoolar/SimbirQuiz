@@ -25,30 +25,30 @@ namespace SimbirQuiz.Infrastructure
             {
                 jsonSerializer.WriteObject(fs, savingQuiz);
 
-                foreach (var task in savingQuiz.Tasks)
-                {
-                    if (task.Images.Count != 0)
-                    {
-                        foreach (var image in task.Images)
-                        {
-                            File.Copy(image, filename);
-                        }
-                    }
-                    if (task.Videos.Count != 0)
-                    {
-                        foreach (var video in task.Videos)
-                        {
-                            File.Copy(video, filename);
-                        }
-                    }
-                    if (task.Audios.Count != 0)
-                    {
-                        foreach (var audio in task.Audios)
-                        {
-                            File.Copy(audio, filename);
-                        }
-                    }
-                }
+                //foreach (var task in savingQuiz.Tasks)
+                //{
+                //    if (task.Images.Count != 0)
+                //    {
+                //        foreach (var image in task.Images)
+                //        {
+                //            File.Copy(image, filename);
+                //        }
+                //    }
+                //    if (task.Videos.Count != 0)
+                //    {
+                //        foreach (var video in task.Videos)
+                //        {
+                //            File.Copy(video, filename);
+                //        }
+                //    }
+                //    if (task.Audios.Count != 0)
+                //    {
+                //        foreach (var audio in task.Audios)
+                //        {
+                //            File.Copy(audio, filename);
+                //        }
+                //    }
+                //}
             }
             
 

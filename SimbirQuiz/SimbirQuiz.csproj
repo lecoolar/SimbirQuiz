@@ -64,9 +64,13 @@
     </ApplicationDefinition>
     <Compile Include="Infrastructure\AnswerSelector.cs" />
     <Compile Include="Infrastructure\DefaultDialogService.cs" />
+    <Compile Include="Infrastructure\FileOpen.xaml.cs">
+      <DependentUpon>FileOpen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Infrastructure\IDialogService.cs" />
     <Compile Include="Infrastructure\IFileService.cs" />
     <Compile Include="Infrastructure\JsonFileService.cs" />
+    <Compile Include="Infrastructure\QuizFileService.cs" />
     <Compile Include="Infrastructure\RandomExtensions.cs" />
     <Compile Include="Models\MultipleAnswer.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
@@ -145,6 +149,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Infrastructure\FileOpen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Resources\AnswersDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

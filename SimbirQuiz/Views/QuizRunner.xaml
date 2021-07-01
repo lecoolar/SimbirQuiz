@@ -18,7 +18,7 @@
         SizeToContent="WidthAndHeight"
         MinWidth="1024" MinHeight="700" WindowStartupLocation="CenterScreen"
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
-        Title="SimbirQuizRunner" >
+        Title="SimbirQuizRunner" Height="780" Width="1222" >
 
     <Window.Resources>
         <ResourceDictionary Source="/Resources/TasksDictionaryForQuizRunner.xaml" />
@@ -57,7 +57,7 @@
         </Grid>
 
         <!-- Task -->
-        <ScrollViewer Grid.Row="1">
+        <ScrollViewer Grid.Row="1" Margin="0,322,0,0">
             <StackPanel>
                 <ContentPresenter Content="{Binding CurrentTask}" />
 
@@ -94,5 +94,10 @@
             </StackPanel>
 
         </Grid>
+        <MediaElement x:Name="Player" HorizontalAlignment="Left" Height="227" Margin="346,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="522" Visibility="Hidden"/>
+        <StackPanel x:Name="Images" HorizontalAlignment="Left" Height="279" Margin="484,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="522" RenderTransformOrigin="0.28,0.4" Visibility="Hidden"/>
+        <Slider x:Name="VolumeSlider" HorizontalAlignment="Left" Margin="218,61,0,0" Grid.Row="1" VerticalAlignment="Top" Height="148" Width="36" Orientation="Vertical" Maximum="1" Value="0.1" Visibility="Hidden"/>
+        <Button x:Name="PauseStartMediaCommand" Content="Старт/Стоп" HorizontalAlignment="Left" Margin="368,257,0,0" Grid.Row="1" VerticalAlignment="Top" Width="111" RenderTransformOrigin="2.107,0.312" Visibility="Hidden"/>
+        <Button x:Name="RestartMediaCommand" Content="Заново" HorizontalAlignment="Left" Margin="518,257,0,0" Grid.Row="1" VerticalAlignment="Top" Width="95" Visibility="Hidden"/>
     </Grid>
 </Window>

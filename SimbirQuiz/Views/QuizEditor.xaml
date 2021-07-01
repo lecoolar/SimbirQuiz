@@ -165,6 +165,7 @@
                     </Grid>
                     <ListBox ItemsSource="{Binding CurrentQuiz.Tasks}"
                              SelectedItem="{Binding SelectedTask}"
+                             Name="Tasks"
                              Height="400">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
@@ -240,6 +241,10 @@
                 <Button Command="{Binding RestartMediaCommand}" Content="Заново" HorizontalAlignment="Left" Margin="549,331,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.573,0.625"/>
                 <Button Command="{Binding DeleteMediaCommand}" Content="Удалить" HorizontalAlignment="Left" Margin="629,331,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
                 <Slider x:Name="VolumeSlider" HorizontalAlignment="Left" Margin="376,225,0,0" Grid.Row="1" VerticalAlignment="Top" Height="102" Width="32" Orientation="Vertical" Maximum="1" Value="0.1"/>
+                <Label Name="AudioIcon" HorizontalAlignment="Left" Margin="546,263,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.482,0.548" Visibility="Hidden">
+                    <materialDesign:PackIcon Kind="Audio"/>
+                </Label>
+
 
             </Grid>
 

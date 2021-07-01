@@ -13,8 +13,8 @@ namespace SimbirQuiz.Models
 		private int _point = 1;
 		private bool _swapAnswer;
 		private ObservableCollection<TrueFalseAnswer> _answers;
-		private List<string> _videos;
-		private List<string> _audios;
+		private string _media;
+		//private List<string> _audios;
 		private ObservableCollection<string> _images;
 
 		public TrueFalseTask() => _answers = new ObservableCollection<TrueFalseAnswer>();
@@ -24,8 +24,8 @@ namespace SimbirQuiz.Models
 		public bool SwapAnswer { get => _swapAnswer; set => _swapAnswer = value; }
 		public ObservableCollection<TrueFalseAnswer> Answers { get => _answers; }
 
-		public List<string> Videos { get => _videos; set => _videos = value; }
-		public List<string> Audios { get => _audios; set => _audios = value; }
+		public string Media { get => _media; set => _media = value; }
+		//public List<string> Audios { get => _audios; set => _audios = value; }
 		public ObservableCollection<string> Images { get => _images; set => _images = value; }
 
 		public void AddNewAnswer() => _answers.Add(new TrueFalseAnswer());

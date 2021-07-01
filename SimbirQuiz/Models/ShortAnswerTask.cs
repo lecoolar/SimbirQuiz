@@ -10,8 +10,8 @@ namespace SimbirQuiz.Models
 		private int _point = 1;
 		private string _userAnswer;
 		private ObservableCollection<Answer> _answers;
-		private List<string> _videos;
-		private List<string> _audios;
+		private string _media;
+		//private string _audio;
 		private ObservableCollection<string> _images;
 
 		public ShortAnswerTask() => _answers = new ObservableCollection<Answer>();
@@ -20,8 +20,8 @@ namespace SimbirQuiz.Models
 		public int Point { get => _point; set => _point = value; }
 		public ObservableCollection<Answer> Answers { get => _answers; }
 		public string UserAnswer { get => _userAnswer; set => _userAnswer = value; }
-		public List<string> Videos { get => _videos; set => _videos = value; }
-		public List<string> Audios { get => _audios; set => _audios = value; }
+		public string Media { get => _media; set => _media = value; }
+		//public List<string> Audios { get => _audio; set => _audio = value; }
 		public ObservableCollection<string> Images { get => _images; set => _images = value; }
 
 		public void AddNewAnswer() => _answers.Add(new Answer());

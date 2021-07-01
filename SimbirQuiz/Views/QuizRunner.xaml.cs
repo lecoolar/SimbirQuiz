@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 
 using SimbirQuiz.Models;
 using SimbirQuiz.ViewModels;
@@ -13,7 +14,11 @@ namespace SimbirQuiz.Views
 		public QuizRunner(Quiz quiz)
 		{
 			InitializeComponent();
-			QuizRunnerViewModel vm = new QuizRunnerViewModel(quiz);
+			List<object> formsToInteract = new List<object>();
+			formsToInteract.Add(Images);
+			formsToInteract.Add(Player);
+			formsToInteract.Add(VolumeSlider);
+			QuizRunnerViewModel vm = new QuizRunnerViewModel(quiz, formsToInteract);
 			if (vm.CloseAction == null)
 				vm.CloseAction = new System.Action(Close);
 			if (vm.MinimizeAction == null)

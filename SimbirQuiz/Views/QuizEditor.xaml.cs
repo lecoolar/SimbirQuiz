@@ -16,6 +16,8 @@ namespace SimbirQuiz.Views
 			formsToInteract.Add(PicturesWrap);
 			formsToInteract.Add(MediaPlayer);
 			formsToInteract.Add(VolumeSlider);
+			formsToInteract.Add(Tasks);			
+			formsToInteract.Add(AudioIcon);			
 			QuizEditorViewModel vm = new QuizEditorViewModel(new DefaultDialogService(), new JsonFileService(), formsToInteract);
 			if (vm.CloseAction == null)
 				vm.CloseAction = new System.Action(Close);
